@@ -43,7 +43,7 @@ const technologyVariants = {
   onscreen: {
     opacity: 1,
     y: 0,
-    transition: { type: 'spring', bounce: 0.3, duration: 0.8 }
+    transition: { type: 'spring', bounce: 0.3, duration: 0.8, delay: 2 }
   }
 };
 
@@ -52,7 +52,7 @@ const footerVariants = {
   onscreen: {
     opacity: 1,
     y: 0,
-    transition: { type: 'spring', bounce: 0.3, duration: 0.8 }
+    transition: { type: 'spring', bounce: 0.3, duration: 0.8, delay: 2.5 }
   }
 };
 

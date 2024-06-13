@@ -2,6 +2,9 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { motion } from 'framer-motion';
 import photo from "../assets/potrait.png";
+import { Link } from '@mui/material';
+import SocialIcons from './atom/SocialIcons';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 const heroVariants = {
     offscreen: { opacity: 0, y: -50 },
@@ -38,6 +41,21 @@ const Hero = () => {
                     <Typography variant="h5" component="h2" sx={{ color: '#e0e0e0', mb: { xs: 2 } }}>
                         Full Stack Web Developer
                     </Typography>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mt: 1 }}>
+                        <LocationOnIcon sx={{ fontSize: '18px', color: '#e0e0e0' }} />
+                        <Link href="https://maps.app.goo.gl/opQUN3LjLLe2bJgD6" target="_blank" rel="noopener noreferrer" sx={{
+                            color: '#e0e0e0', textDecoration: 'none', '&:hover': {
+                                textDecoration: 'underline',
+                            }
+                        }}>
+                            <Typography variant="body1" component="p" sx={{ fontStyle: 'italic' }}>
+                                Jakarta, Indonesia
+                            </Typography>
+                        </Link>
+                    </Box>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mt: 1 }}>
+                        <SocialIcons />
+                    </Box>
                 </Box>
                 <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                     <Box

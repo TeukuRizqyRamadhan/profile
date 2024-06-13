@@ -78,7 +78,7 @@ const Technology = () => {
                 </Typography>
                 <Slider {...settings}>
                     {logos.map((logo, index) => (
-                        <Box key={index} sx={{ px: 2 }}>
+                        <Box key={index} sx={{}}>
                             <Box
                                 sx={{
                                     display: 'flex',

@@ -2,8 +2,6 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Link } from '@mui/material';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import SocialIcons from '../components/atom/SocialIcons'; // Pastikan jalur import sesuai
 import { motion } from 'framer-motion';
 
 const aboutVariants = {

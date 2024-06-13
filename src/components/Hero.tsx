@@ -41,7 +41,7 @@ const Hero = () => {
                     <Typography variant="h5" component="h2" sx={{ color: '#e0e0e0', mb: { xs: 2 } }}>
                         Full Stack Web Developer
                     </Typography>
-                    <Box sx={{ display: 'flex', alignItems: 'center', mt: 1 }}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mt: 1, justifyContent: { xs: 'center', md: 'left' } }}>
                         <LocationOnIcon sx={{ fontSize: '18px', color: '#e0e0e0' }} />
                         <Link href="https://maps.app.goo.gl/opQUN3LjLLe2bJgD6" target="_blank" rel="noopener noreferrer" sx={{
                             color: '#e0e0e0', textDecoration: 'none', '&:hover': {
@@ -53,7 +53,7 @@ const Hero = () => {
                             </Typography>
                         </Link>
                     </Box>
-                    <Box sx={{ display: 'flex', alignItems: 'center', mt: 1 }}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mt: 1, justifyContent: { xs: 'center', md: 'left' }, mb: { xs: 2, md: 0 } }}>
                         <SocialIcons />
                     </Box>
                 </Box>

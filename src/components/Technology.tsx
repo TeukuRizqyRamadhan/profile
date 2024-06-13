@@ -68,7 +68,7 @@ const Technology = () => {
                                 display: 'flex',
                                 justifyContent: 'center',
                                 alignItems: 'center',
-                                height: '100px',
+                                height: { xs: '80px', md: '100px' },
                                 marginBottom: '10px',
                                 transition: 'transform 0.3s, box-shadow 0.3s',
                                 cursor: 'pointer',
@@ -82,10 +82,17 @@ const Technology = () => {
                                 component="img"
                                 src={logo.src}
                                 alt={logo.name}
-                                sx={{ width: '60%', height: 'auto' }}
+                                sx={{ width: { xs: '25%', md: '60%' }, height: 'auto' }}
                             />
                         </Box>
-                        <Typography variant="body2" component="p" sx={{ color: '#e0e0e0' }}>
+                        <Typography
+                            variant="body2"
+                            component="p"
+                            sx={{
+                                color: '#e0e0e0',
+                                display: { xs: 'none', md: 'block' }
+                            }}
+                        >
                             {logo.name}
                         </Typography>
                     </Box>

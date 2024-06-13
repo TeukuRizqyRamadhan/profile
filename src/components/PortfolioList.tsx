@@ -26,7 +26,7 @@ const PortfolioList: React.FC<PortfolioListProps> = ({ items }) => {
                     Projects
                 </Typography >
             </Box>
-            <Grid container spacing={4} sx={{ pt: 4 }}>
+            <Grid container spacing={4} sx={{ pt: 4, p: { xs: 2 } }}>
                 {items.map((item, index) => (
                     <Grid item xs={12} sm={6} key={index}>
                         <Card

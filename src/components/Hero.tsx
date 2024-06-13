@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import photo from "../assets/potrait.png"
+import photo from "../assets/potrait.png";
 
 const Hero = () => {
     return (
@@ -18,7 +18,26 @@ const Hero = () => {
                     component="img"
                     src={photo}
                     alt="Foto Teuku Rizqy Ramadhan"
-                    sx={{ width: '200px', height: '200px', borderRadius: '50%' }}
+                    sx={{
+                        width: '200px',
+                        height: '200px',
+                        borderRadius: '50%',
+                        boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.2)',
+                        transition: 'transform 0.3s ease-in-out',
+                        '&:hover': {
+                            transform: 'scale(1.1)',
+                            boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.3)',
+                            animation: 'rotate 0.8s infinite linear',
+                        },
+                        '@keyframes rotate': {
+                            '0%': {
+                                transform: 'rotate(0deg)',
+                            },
+                            '100%': {
+                                transform: 'rotate(360deg)',
+                            },
+                        },
+                    }}
                 />
             </Box>
         </Box>

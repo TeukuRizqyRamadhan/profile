@@ -29,10 +29,7 @@ const About = () => {
                         <Typography variant="body1" component="p" sx={{ mt: 2 }}>
                             Hello, I am a Full Stack Web Developer & UI/UX Designer based in Jakarta, able to work individually or in a team. Hard worker and confident. I'm currently work at Tzu Chi School
                         </Typography>
-                        <Box sx={{ display: 'flex', alignItems: 'center', mt: 3 }}>
-                            <SocialIcons />
-                        </Box>
-                        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                        <Box sx={{ display: 'flex', alignItems: 'center', mt: 1 }}>
                             <LocationOnIcon sx={{ fontSize: '18px' }} />
                             <Link href="https://maps.app.goo.gl/opQUN3LjLLe2bJgD6" target="_blank" rel="noopener noreferrer" sx={{
                                 color: '#e0e0e0', textDecoration: 'none', '&:hover': {
@@ -43,6 +40,9 @@ const About = () => {
                                     Jakarta, Indonesia
                                 </Typography>
                             </Link>
+                        </Box>
+                        <Box sx={{ display: 'flex', alignItems: 'center', mt: 1 }}>
+                            <SocialIcons />
                         </Box>
                         <Link href="https://docs.google.com/document/d/1aOGDsJTiz92dhitDkr3KWltOyAvge88B/edit?usp=sharing&ouid=111057544088647809250&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">
                             <Button variant="contained" sx={{

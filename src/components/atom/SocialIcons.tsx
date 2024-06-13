@@ -7,15 +7,21 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 
 const SocialIcons = () => {
     return (
-        <Box sx={{ display: 'flex', gap: 2, mb: 1 }}>
+        <Box sx={{ display: 'flex', gap: 1, mb: 1 }}>
             <IconButton
                 href="mailto:teukurizqyr@gmail.com"
                 target="_blank"
                 sx={{
                     color: '#e0e0e0',
-                    p: 0,
+                    borderColor: '#e0e0e0',
+                    borderWidth: '1px',
+                    borderStyle: 'solid',
+                    borderRadius: '8px',
+                    padding: '8px',
                     '&:hover': {
-                        color: 'blue',
+                        backgroundColor: '#e0e0e0',
+                        color: '#242424',
+                        borderColor: '#242424',
                     }
                 }}
             >
@@ -26,9 +32,15 @@ const SocialIcons = () => {
                 target="_blank"
                 sx={{
                     color: '#e0e0e0',
-                    p: 0,
+                    borderColor: '#e0e0e0',
+                    borderWidth: '1px',
+                    borderStyle: 'solid',
+                    borderRadius: '8px',
+                    padding: '8px',
                     '&:hover': {
-                        color: 'blue',
+                        backgroundColor: '#e0e0e0',
+                        color: '#242424',
+                        borderColor: '#242424',
                     }
                 }}
             >
@@ -39,9 +51,15 @@ const SocialIcons = () => {
                 target="_blank"
                 sx={{
                     color: '#e0e0e0',
-                    p: 0,
+                    borderColor: '#e0e0e0',
+                    borderWidth: '1px',
+                    borderStyle: 'solid',
+                    borderRadius: '8px',
+                    padding: '8px',
                     '&:hover': {
-                        color: 'blue',
+                        backgroundColor: '#e0e0e0',
+                        color: '#242424',
+                        borderColor: '#242424',
                     }
                 }}
             >
@@ -52,9 +70,15 @@ const SocialIcons = () => {
                 target="_blank"
                 sx={{
                     color: '#e0e0e0',
-                    p: 0,
+                    borderColor: '#e0e0e0',
+                    borderWidth: '1px',
+                    borderStyle: 'solid',
+                    borderRadius: '8px',
+                    padding: '8px',
                     '&:hover': {
-                        color: 'blue',
+                        backgroundColor: '#e0e0e0',
+                        color: '#242424',
+                        borderColor: '#242424',
                     }
                 }}
             >

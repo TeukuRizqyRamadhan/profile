@@ -10,6 +10,7 @@ import image6 from '../assets/logo/nodejs.png';
 import image7 from '../assets/logo/nestjs.png';
 import image8 from '../assets/logo/typescript.png';
 import image9 from '../assets/logo/express.png';
+import { motion } from 'framer-motion';
 
 const logos = [
     { src: image1, name: 'React' },
@@ -22,6 +23,15 @@ const logos = [
     { src: image8, name: 'TypeScript' },
     { src: image9, name: 'Express' },
 ];
+
+const technologyVariants = {
+    offscreen: { opacity: 0, y: 0 },
+    onscreen: {
+        opacity: 1,
+        y: 0,
+        transition: { type: 'spring', bounce: 0.3, duration: 0.8, delay: 0.2 }
+    }
+};
 
 const Technology = () => {
     const settings = {
@@ -56,49 +66,56 @@ const Technology = () => {
     };
 
     return (
-        <Box sx={{ p: 4, textAlign: 'center', backgroundColor: '#242424' }}>
-            <Typography variant="h4" component="h2" gutterBottom sx={{ color: '#e0e0e0' }}>
-                Technology
-            </Typography>
-            <Slider {...settings}>
-                {logos.map((logo, index) => (
-                    <Box key={index} sx={{ px: 2 }}>
-                        <Box
-                            sx={{
-                                display: 'flex',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                height: { xs: '80px', md: '100px' },
-                                marginBottom: '10px',
-                                transition: 'transform 0.3s, box-shadow 0.3s',
-                                cursor: 'pointer',
-                                '&:hover': {
-                                    transform: 'scale(1.1)',
-                                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)',
-                                }
-                            }}
-                        >
+        <motion.div
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0.5 }}
+            variants={technologyVariants}
+        >
+            <Box sx={{ p: 4, textAlign: 'center', backgroundColor: '#242424' }}>
+                <Typography variant="h4" component="h2" gutterBottom sx={{ color: '#e0e0e0' }}>
+                    Technology
+                </Typography>
+                <Slider {...settings}>
+                    {logos.map((logo, index) => (
+                        <Box key={index} sx={{ px: 2 }}>
                             <Box
-                                component="img"
-                                src={logo.src}
-                                alt={logo.name}
-                                sx={{ width: { xs: '25%', md: '60%' }, height: 'auto' }}
-                            />
+                                sx={{
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                    height: { xs: '80px', md: '100px' },
+                                    marginBottom: '10px',
+                                    transition: 'transform 0.3s, box-shadow 0.3s',
+                                    cursor: 'pointer',
+                                    '&:hover': {
+                                        transform: 'scale(1.1)',
+                                        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)',
+                                    }
+                                }}
+                            >
+                                <Box
+                                    component="img"
+                                    src={logo.src}
+                                    alt={logo.name}
+                                    sx={{ width: { xs: '25%', md: '60%' }, height: 'auto' }}
+                                />
+                            </Box>
+                            <Typography
+                                variant="body2"
+                                component="p"
+                                sx={{
+                                    color: '#e0e0e0',
+                                    display: { xs: 'none', md: 'block' }
+                                }}
+                            >
+                                {logo.name}
+                            </Typography>
                         </Box>
-                        <Typography
-                            variant="body2"
-                            component="p"
-                            sx={{
-                                color: '#e0e0e0',
-                                display: { xs: 'none', md: 'block' }
-                            }}
-                        >
-                            {logo.name}
-                        </Typography>
-                    </Box>
-                ))}
-            </Slider>
-        </Box>
+                    ))}
+                </Slider>
+            </Box>
+        </motion.div>
     );
 };
 

@@ -5,10 +5,56 @@ import About from './components/About';
 import Footer from './components/Footer';
 import './style.css';
 import { Box } from '@mui/material';
+import { motion } from 'framer-motion';
 import image1 from './assets/email.png';
 import image2 from './assets/kegiatan.png';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+const boxVariants = {
+  offscreen: { opacity: 0, y: 0 },
+  onscreen: {
+    opacity: 1,
+    y: 0,
+    transition: { type: 'spring', bounce: 0.3, duration: 0.8, delay: 0.5 }
+  }
+};
+
+const aboutVariants = {
+  offscreen: { opacity: 0, y: 0 },
+  onscreen: {
+    opacity: 1,
+    y: 0,
+    transition: { type: 'spring', bounce: 0.3, duration: 0.8, delay: 1 }
+  }
+};
+
+const portfolioVariants = {
+  offscreen: { opacity: 0, y: 0 },
+  onscreen: {
+    opacity: 1,
+    y: 0,
+    transition: { type: 'spring', bounce: 0.3, duration: 0.8, delay: 1.5 }
+  }
+};
+
+const technologyVariants = {
+  offscreen: { opacity: 0, y: 0 },
+  onscreen: {
+    opacity: 1,
+    y: 0,
+    transition: { type: 'spring', bounce: 0.3, duration: 0.8 }
+  }
+};
+
+const footerVariants = {
+  offscreen: { opacity: 0, y: 0 },
+  onscreen: {
+    opacity: 1,
+    y: 0,
+    transition: { type: 'spring', bounce: 0.3, duration: 0.8 }
+  }
+};
 
 function App() {
   const portfolioItems = [
@@ -30,12 +76,47 @@ function App() {
   return (
     <>
       <Box id='content'>
-        <Hero />
-        <About />
-        <PortfolioList items={portfolioItems} />
-        <Technology />
+        <motion.div
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.5 }}
+          variants={boxVariants}
+        >
+          <Hero />
+        </motion.div>
+        <motion.div
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.5 }}
+          variants={aboutVariants}
+        >
+          <About />
+        </motion.div>
+        <motion.div
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.5 }}
+          variants={portfolioVariants}
+        >
+          <PortfolioList items={portfolioItems} />
+        </motion.div>
+        <motion.div
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.5 }}
+          variants={technologyVariants}
+        >
+          <Technology />
+        </motion.div>
+        <motion.div
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.5 }}
+          variants={footerVariants}
+        >
+          <Footer />
+        </motion.div>
       </Box>
-      <Footer />
     </>
   );
 }

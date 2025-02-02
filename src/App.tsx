@@ -8,6 +8,8 @@ import { Box } from '@mui/material';
 import { motion } from 'framer-motion';
 import image1 from './assets/email.png';
 import image2 from './assets/kegiatan.png';
+import image3 from './assets/khodam.png';
+import image4 from './assets/kalkulator.png';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -70,6 +72,18 @@ function App() {
       link: 'https://kegiatan-fe.vercel.app/',
       image: image2
     },
+    {
+      name: 'Cek Khodam',
+      description: 'Aplikasi untuk mengecek khodam yang ada pada dirimu',
+      link: 'https://cek-khodam-new.vercel.app/',
+      image: image3
+    },
+    {
+      name: 'Kalkulator Patungan',
+      description: 'Aplikasi untuk menghitung patungan saat pemesanan makanan di restoran',
+      link: 'https://patungan-id.vercel.app/',
+      image: image4
+    }
     // Tambahkan lebih banyak proyek jika diperlukan
   ];
 
